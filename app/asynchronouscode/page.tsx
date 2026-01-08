@@ -6,8 +6,8 @@ import React, { useEffect, useState } from 'react'
 const api = "http://localhost:3000/Products"
 
 function Page() {
-    const [products, setProducts] = useState([])
-    const [product, setProduct] = useState(null)
+    const [products, setProducts] = useState<any>([])
+    const [product, setProduct] = useState<any>(null)
     const [openInfo, setOpenInfo] = useState(false)
     const [openAdd, setOpenAdd] = useState(false)
     const [openEdit, setopenEdit] = useState(false)
@@ -48,7 +48,7 @@ function Page() {
         }
     }
 
-    async function DeleteProd(id) {
+    async function DeleteProd(id: string) {
         try {
             await axios.delete(`${api}/${id}`)
             GetTodo()
@@ -137,8 +137,8 @@ function Page() {
             )}
 
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-                {products?.filter((b) => b.name.toLowerCase().includes(search.toLowerCase()))
-                    .map((e) => (
+                {products?.filter((b:any) => b.name.toLowerCase().includes(search.toLowerCase()))
+                    .map((e:any) => (
                         <div key={e.id} className='group bg-white dark:bg-black border border-gray-200 dark:border-[#333] rounded-xl p-4 shadow-sm hover:-translate-y-1 transition-all'>
                             <div className="cursor-pointer" onClick={() => { setProduct(e); setOpenInfo(true); }}>
                                 <h2 className='text-gray-400 text-[10px] uppercase font-bold'>Smartphone</h2>

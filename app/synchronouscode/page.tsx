@@ -3,11 +3,11 @@ import { ShimmerButton } from '@/components/ui/shimmer-button'
 import React, { useState } from 'react'
 
 function Page() {
-    const [product, setProduct] = useState(null)
+    const [product, setProduct] = useState<any>(null)
     const [openInfo, setOpenInfo] = useState(false)
     const [openAdd, setOpenAdd] = useState(false)
     const [openEdit, setopenEdit] = useState(false)
-    const [products, setProducts] = useState([
+    const [products, setProducts] = useState<any>([
         { name: 'Iphone 17 pro max', id: '1', price: '20000' },
         { name: 'Samsung S24 Ultra', id: '2', price: '15000' },
         { name: 'Redmi Note 12', id: '3', price: '15000' },
@@ -22,7 +22,7 @@ function Page() {
     const [search, setSearch] = useState('')
 
     function DeleteProd(id: string) {
-        setProducts(products.filter((e) => e.id !== id))
+        setProducts(products.filter((e: any) => e.id !== id))
     }
 
     return (
@@ -137,7 +137,7 @@ function Page() {
                             <div className="mt-8">
                                 <ShimmerButton
                                     onClick={() => {
-                                        const updatedProducts = products.map((item) =>
+                                        const updatedProducts = products.map((item: any) =>
                                             item.id === idx
                                                 ? { ...item, name: editName, price: editPrice }
                                                 : item
@@ -191,8 +191,8 @@ function Page() {
 
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
                 {products
-                    .filter((a) => a.name.toLowerCase().includes(search.toLowerCase()))
-                    .map((e) => (
+                    .filter((a: any) => a.name.toLowerCase().includes(search.toLowerCase()))
+                    .map((e: any) => (
                         <div key={e.id} className='group bg-white dark:bg-black border flex items-end justify-between border-gray-200 dark:border-[#1a1a1a] rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1'>
                             <div className="cursor-pointer flex-1" onClick={() => { setProduct(e); setOpenInfo(true); }}>
                                 <div className='mb-2'>
