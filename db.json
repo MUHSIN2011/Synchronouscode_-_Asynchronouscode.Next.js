@@ -1,0 +1,34 @@
+{
+  "Products": [
+    {
+      "name": "Iphone 17 pro maxx",
+      "price": "20001",
+      "id": "1"
+    },
+    {
+      "name": "Samsung S24 Ultra",
+      "id": "2",
+      "price": "15000"
+    },
+    {
+      "name": "Redmi Note 12",
+      "id": "3",
+      "price": "15000"
+    },
+    {
+      "name": "Xiaomi 14",
+      "id": "4",
+      "price": "15000"
+    },
+    {
+      "name": "Tecno Camon 30",
+      "id": "5",
+      "price": "15000"
+    },
+    {
+      "id": "03b4",
+      "name": "Iphone xs",
+      "price": "10000"
+    }
+  ]
+}
