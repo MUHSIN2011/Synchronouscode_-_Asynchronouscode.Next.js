@@ -1,0 +1,4 @@
+html, body {
+    /* пешгирӣ кардани horizontal scroll аз аниматсияҳо */
+    overflow-x: hidden;
+}
